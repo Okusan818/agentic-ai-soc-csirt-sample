@@ -1,5 +1,5 @@
 > **文書ID**: OV-004
-> **バージョン**: 0.1.0
+> **バージョン**: 0.2.0
 > **改訂日**: 2026-11-02
 
 # カスタマイズポイント一覧
@@ -38,6 +38,9 @@
 | `P-12` | Lv1/Lv2で実施した措置を継続するか人間が判断する期限 | 24時間 | [AI-002](../02-agentic-ai/02-02-authority-levels.md) |
 | `P-13` | 日次サンプリングレビューの件数 | 前日のLv1実行件数の10%(最低10件) | [AI-004](../02-agentic-ai/02-04-audit-and-kill-switch.md) |
 | `P-26` | モデル・設定の変更後に、Lv1をLv2として扱う期間 | 2週間 | [AI-005](../02-agentic-ai/02-05-ai-specific-threats.md) |
+| `P-27` | 証拠収集の既定の期間 | 基準時刻の前72時間から収集時点まで | [AI-006](../02-agentic-ai/02-06-evidence-grounded-investigation.md)、各Runbook第7章 |
+| `P-28` | 軽量トリアージで誤検知としてクローズした件の日次サンプリング件数 | 前日のクローズ件数の10%(最低10件) | [AI-006](../02-agentic-ai/02-06-evidence-grounded-investigation.md)、[AI-004](../02-agentic-ai/02-04-audit-and-kill-switch.md) |
+| `P-29` | グループ横断テレメトリで、集約値を表示する最小の該当社数 | 3社 | [AI-006](../02-agentic-ai/02-06-evidence-grounded-investigation.md) |
 
 ### 周期・期限
 
@@ -66,6 +69,8 @@
 | 影響度・緊急度の判定目安 | [GOV-002](../01-governance/01-02-severity-matrix.md) |
 | 外部報告の判定基準・適用法令・報告期限 | [GOV-003](../01-governance/01-03-external-reporting-flow.md) |
 | エージェントの構成と各エージェントのツール権限 | [AI-001](../02-agentic-ai/02-01-architecture.md) |
+| 判定語彙、証拠パッケージの項目 | [AI-006](../02-agentic-ai/02-06-evidence-grounded-investigation.md) |
+| 各シナリオで収集する証拠と、措置に必要な証拠 | [03-soc-runbooks/](../03-soc-runbooks/README.md) の各Runbook第7章 |
 | 保護資産の範囲、AIが実行しない操作 | [AI-002](../02-agentic-ai/02-02-authority-levels.md) |
 | 外部AIサービスへ送るデータの範囲 | [AI-005](../02-agentic-ai/02-05-ai-specific-threats.md) |
 | 各シナリオの誤検知除外条件 | [03-soc-runbooks/](../03-soc-runbooks/README.md) の各Runbook |

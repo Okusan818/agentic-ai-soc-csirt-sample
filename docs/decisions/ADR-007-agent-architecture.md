@@ -1,10 +1,10 @@
 > **文書ID**: ADR-007
-> **バージョン**: 0.1.0
+> **バージョン**: 0.2.0
 > **改訂日**: 2026-11-02
 
 # ADR-007: オーケストレーターと専門エージェントの構成
 
-- ステータス: 採用
+- ステータス: 採用(調査・分析エージェントの構成は [ADR-013](ADR-013-evidence-grounded-investigation.md) で拡張)
 - 決定日: 2026-11-02
 
 ## 背景
@@ -33,4 +33,5 @@ Agentic AIに一次評価から封じ込めまでを担わせるにあたり、�
 
 ## 変更するときの影響範囲
 
+- 調査・分析エージェント群の内訳を変える場合: [ADR-013](ADR-013-evidence-grounded-investigation.md) の影響範囲を参照
 - エージェントの分割を変える場合: [AI-001](../../02-agentic-ai/02-01-architecture.md) の表、[GOV-001](../../01-governance/01-01-organization-structure.md) 第2章の分担、各Runbookの「実行主体」

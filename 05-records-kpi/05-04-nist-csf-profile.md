@@ -1,5 +1,5 @@
 > **文書ID**: REC-004
-> **バージョン**: 0.2.0
+> **バージョン**: 0.3.0
 > **改訂日**: 2026-11-02
 
 # NIST CSF 2.0プロファイル
@@ -38,7 +38,7 @@
 | GV.RM リスクマネジメント戦略 | ○ | [GOV-002](../01-governance/01-02-severity-matrix.md) | | | |
 | GV.RR 役割・責任・権限 | ◎ | [GOV-001](../01-governance/01-01-organization-structure.md)、[GOV-004](../01-governance/01-04-raci.md)、[GOV-005](../01-governance/01-05-operating-hours.md)、[AI-002](../02-agentic-ai/02-02-authority-levels.md) | | | |
 | GV.PO ポリシー | ○ | [AI-002](../02-agentic-ai/02-02-authority-levels.md)(AIの運用方針) | | | |
-| GV.OV 監督 | ◎ | [AI-004](../02-agentic-ai/02-04-audit-and-kill-switch.md)、[SOC-053](../03-soc-runbooks/03-53-compliance-monitoring.md)、[REC-003](05-03-kpi-sheet.md) | | | |
+| GV.OV 監督 | ◎ | [AI-004](../02-agentic-ai/02-04-audit-and-kill-switch.md)、[AI-006](../02-agentic-ai/02-06-evidence-grounded-investigation.md)(引用検証)、[SOC-053](../03-soc-runbooks/03-53-compliance-monitoring.md)、[REC-003](05-03-kpi-sheet.md) | | | |
 | GV.SC サプライチェーンリスクマネジメント | ○ | [GOV-001](../01-governance/01-01-organization-structure.md)(構成会社・委託関係)、[AI-005](../02-agentic-ai/02-05-ai-specific-threats.md)(外部AIサービス) | | | |
 
 ### Identify(識別)
@@ -55,7 +55,7 @@
 |---|---|---|---|---|---|
 | PR.AA アイデンティティ管理・認証・アクセス制御 | ― | ([AI-001](../02-agentic-ai/02-01-architecture.md) のエージェントの識別のみ) | | | |
 | PR.AT 意識向上・トレーニング | ― | ― | | | |
-| PR.DS データセキュリティ | ― | ([AI-003](../02-agentic-ai/02-03-decision-logging.md) の判断ログの保護のみ) | | | |
+| PR.DS データセキュリティ | ― | ([AI-003](../02-agentic-ai/02-03-decision-logging.md) の判断ログ・証拠パッケージの保護、[AI-006](../02-agentic-ai/02-06-evidence-grounded-investigation.md) の構成会社間のデータ分離のみ) | | | |
 | PR.PS プラットフォームセキュリティ | ○ | [SOC-053](../03-soc-runbooks/03-53-compliance-monitoring.md)(ログの保管・セキュリティ製品の稼働) | | | |
 | PR.IR 技術インフラのレジリエンス | ― | ― | | | |
 
@@ -64,14 +64,14 @@
 | カテゴリ | 範囲 | 本一式の対応文書 | Current | Target | 差分と改善計画 |
 |---|---|---|---|---|---|
 | DE.CM 継続的モニタリング | ◎ | [SOC-001〜007](../03-soc-runbooks/README.md)、[SOC-051](../03-soc-runbooks/03-51-daily-operations.md)、[SOC-053](../03-soc-runbooks/03-53-compliance-monitoring.md)(ログの途絶)、[GOV-005](../01-governance/01-05-operating-hours.md) | | | |
-| DE.AE 有害事象の分析 | ◎ | [SOC-001〜007](../03-soc-runbooks/README.md)、[AI-001](../02-agentic-ai/02-01-architecture.md)、[GOV-002](../01-governance/01-02-severity-matrix.md) | | | |
+| DE.AE 有害事象の分析 | ◎ | [SOC-001〜007](../03-soc-runbooks/README.md)、[AI-001](../02-agentic-ai/02-01-architecture.md)、[AI-006](../02-agentic-ai/02-06-evidence-grounded-investigation.md)、[GOV-002](../01-governance/01-02-severity-matrix.md) | | | |
 
 ### Respond(対応)
 
 | カテゴリ | 範囲 | 本一式の対応文書 | Current | Target | 差分と改善計画 |
 |---|---|---|---|---|---|
 | RS.MA インシデント管理 | ◎ | [CSIRT-001](../04-csirt-playbooks/04-01-incident-response-lifecycle.md)、[GOV-002](../01-governance/01-02-severity-matrix.md)、[REC-001](05-01-incident-record-format.md) | | | |
-| RS.AN インシデント分析 | ◎ | [CSIRT-001](../04-csirt-playbooks/04-01-incident-response-lifecycle.md)、[CSIRT-011](../04-csirt-playbooks/04-11-ransomware.md)、[CSIRT-012](../04-csirt-playbooks/04-12-data-breach.md)、[REC-002](05-02-ai-decision-log-format.md) | | | |
+| RS.AN インシデント分析 | ◎ | [CSIRT-001](../04-csirt-playbooks/04-01-incident-response-lifecycle.md)、[AI-006](../02-agentic-ai/02-06-evidence-grounded-investigation.md)、[CSIRT-011](../04-csirt-playbooks/04-11-ransomware.md)、[CSIRT-012](../04-csirt-playbooks/04-12-data-breach.md)、[REC-002](05-02-ai-decision-log-format.md) | | | |
 | RS.CO インシデント対応の報告・コミュニケーション | ◎ | [GOV-003](../01-governance/01-03-external-reporting-flow.md)、[CSIRT-002](../04-csirt-playbooks/04-02-external-coordination.md) | | | |
 | RS.MI インシデントの軽減 | ◎ | [AI-002](../02-agentic-ai/02-02-authority-levels.md)、[SOC-001〜007](../03-soc-runbooks/README.md) の対応手順 | | | |
 
