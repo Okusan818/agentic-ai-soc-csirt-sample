@@ -29,7 +29,7 @@ CSIRT(Computer Security Incident Response Team)の設計書・運用手順書・
 
 | # | ディレクトリ | 内容 | 主なNIST CSF 2.0対応 |
 |---|---|---|---|
-| 1 | [`00-overview/`](00-overview/) | 本一式の前提・用語集・NIST CSF 2.0対応表の索引 | - |
+| 1 | [`00-overview/`](00-overview/) | [用語集](00-overview/00-01-glossary.md)・[NIST CSF 2.0対応表索引](00-overview/00-02-nist-csf-index.md) | - |
 | 2 | [`01-governance/`](01-governance/) | 組織・ガバナンス設計(コーポレート/システム子会社/100社の関係、RACI、エスカレーション基準) | Govern |
 | 3 | [`02-agentic-ai/`](02-agentic-ai/) | Agentic AI運用設計(AIエージェントの権限・自律範囲・Human-in-the-loopゲート・判断ログ) | Govern / Protect |
 | 4 | [`03-soc-runbooks/`](03-soc-runbooks/) | SOC運用手順書(監視・トリアージ・エスカレーションのRunbook) | Detect |
