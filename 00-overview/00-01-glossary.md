@@ -1,21 +1,52 @@
 > **文書ID**: OV-001
-> **バージョン**: 0.1.0
+> **バージョン**: 0.2.0
 > **改訂日**: 2026-11-02
 
 # 用語集
 
+## 組織・役割
+
 | 用語 | 説明 |
 |---|---|
-| SOC(Security Operation Center) | セキュリティイベントの監視・検知・一次対応を担う常設組織。本一式ではTier1/2/3の階層で構成。 |
-| CSIRT(Computer Security Incident Response Team) | 重大インシデント発生時に発動する、対応の統制・調整を担う組織。本一式ではSOCと平時分業・重大時合流のパラドックス型。 |
-| Agentic AI | 自律的に判断・実行するAIエージェント。本一式ではオーケストレーター+専門シングルタスクエージェントのプール構成を前提とする。 |
-| Tier1/2/3 | SOC内の階層。Tier1は一次監視、Tier2はインシデント対応、Tier3はSME・脅威ハンティングを担う。 |
-| PoC(Point of Contact) | 構成会社側に置くセキュリティ窓口担当者(兼任可)。 |
-| 権限レベル(Lv1/2/3) | Agentic AIが実行する操作の権限区分。Lv1は自動実行、Lv2は事後承認、Lv3は事前承認必須。 |
-| Human-in-the-loop | AIの判断・実行プロセスに人間の確認・承認を組み込む設計。 |
+| SOC(Security Operation Center) | セキュリティイベントの監視・検知・初期対応を担う常設組織。本一式ではシステム子会社に置き、Tier1/2/3で構成する。 |
+| CSIRT(Computer Security Incident Response Team) | 重大インシデントの対応を統制・調整する機能。本一式では兼務・発動型とする(平時はSOC要員が兼務し、Critical/High発生時に発動)。 |
+| Tier1 | AI出力の監督者。トリアージ・エージェントの判定確認、Lv2措置の事後確認、日次サンプリングレビューを担う。 |
+| Tier2 | インシデントレスポンダー。深掘り分析と初期対応、夜間・休日のオンコール一次担当を担う。 |
+| Tier3 | SME・脅威ハンター。複雑な事案の対応、脅威ハンティング、検知ルールの改善を担う。 |
+| SOCマネージャー | SOCの日常運用の責任者。 |
+| セキュリティ運用責任者 | システム子会社でSOC・CSIRTを統括する責任者。 |
+| グループCISO | コーポレート(親会社)の最高情報セキュリティ責任者。グループ全体の方針と統制を担う。 |
+| 構成会社責任者 | 各構成会社でセキュリティに責任を持つ役員等。自社の外部報告の最終承認者。 |
+| PoC(Point of Contact) | 構成会社側のセキュリティ窓口担当者(兼任可)。 |
+| オンコール | 夜間・休日に呼び出しを受けて対応する当番体制。 |
+
+## Agentic AI
+
+| 用語 | 説明 |
+|---|---|
+| Agentic AI | 自律的に判断・実行するAIエージェント。本一式ではオーケストレーターと専門エージェント群の構成を前提とする。 |
+| 権限レベル(Lv1/Lv2/Lv3) | AIが実行する操作の区分。Lv1は自動実行、Lv2は自動実行後に人間が確認、Lv3は実行前に人間の承認が必須。 |
+| 保護資産 | 停止すると業務への影響が大きいため、AIの自動実行の対象から外す資産。保護資産への操作は常にLv3。 |
+| Human-in-the-loop | AIの判断・実行の過程に人間の確認・承認を組み込む設計。 |
+| Kill-switch | AIの自動実行をすべて止め、全操作を人間の事前承認に切り替える緊急停止の仕組み。 |
+| プロンプトインジェクション | 攻撃者がログやメール本文などに指示文を紛れ込ませ、AIに意図しない動作をさせる攻撃。 |
+
+## 手順・記録・評価
+
+| 用語 | 説明 |
+|---|---|
 | Runbook | SOCが検知シナリオごとに従う対応手順書。 |
-| Playbook | CSIRTが重大インシデント対応で従う手順書。 |
-| RACI | タスクごとの役割(Responsible/Accountable/Consulted/Informed)を定義するマトリクス。 |
+| Playbook | CSIRTが重大インシデントの対応で従う手順書。 |
+| IoC(Indicator of Compromise) | 侵害の痕跡を示す指標(悪性のファイルハッシュ、URL、IPアドレス、メールなど)。 |
+| 影響度・緊急度 | 重大度を決める2つの軸。影響度は業務・情報への影響の大きさ、緊急度は攻撃の進行状況。 |
+| RACI | タスクごとの役割(Responsible=実行責任、Accountable=説明責任、Consulted=相談先、Informed=報告先)を定める表。 |
 | MTTD / MTTR | 平均検知時間(Mean Time To Detect)/ 平均対応時間(Mean Time To Respond)。 |
-| NIST CSF 2.0 | NISTが定めるサイバーセキュリティフレームワーク第2版。Govern/Identify/Protect/Detect/Respond/Recoverの6機能で構成。 |
-| Implementation Tier | NIST CSFにおける成熟度評価の4段階(Partial/Risk Informed/Repeatable/Adaptive)。 |
+| ADR(Architecture Decision Record) | 設計判断の内容・理由・代替案を記録した文書。 |
+
+## NIST CSF 2.0
+
+| 用語 | 説明 |
+|---|---|
+| NIST CSF 2.0 | 米国NISTのサイバーセキュリティフレームワーク第2版。6機能・22カテゴリで構成。 |
+| プロファイル(Current / Target) | カテゴリごとに組織の現状(Current)と目標(Target)を記述したもの。差分が改善計画になる。 |
+| Tier | 組織全体のリスクのガバナンスと管理の厳密さを表す4段階(Partial / Risk Informed / Repeatable / Adaptive)。 |
