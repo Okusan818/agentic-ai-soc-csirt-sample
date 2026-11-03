@@ -25,9 +25,11 @@ AIエージェントの出力は、人間が検証できる形でなければ運
 
 - **権限の段階化**: AIが実行する措置を、可逆性・対象数・保護資産の有無で3段階に分け、人間の関与を決める([AI-002](02-agentic-ai/02-02-authority-levels.md))。
 - **証拠に基づく調査**: 証拠の収集はモデルではなくコードで行い、調査範囲を強制する。AIの所見には証拠の引用を必須とし、
-  コードで検証してから人間に渡す。証拠が足りなければAIは判定しない([AI-006](02-agentic-ai/02-06-evidence-grounded-investigation.md))。
-  この考え方は、Cloudflareの[証拠に基づくエージェント型セキュリティ運用の事例](https://blog.cloudflare.com/agentic-security-operations/)を参考にしている([ADR-013](docs/decisions/ADR-013-evidence-grounded-investigation.md))。
+  コードで検証してから人間に渡す。証拠が足りなければAIは判定しない([AI-006](02-agentic-ai/02-06-evidence-grounded-investigation.md)、[ADR-013](docs/decisions/ADR-013-evidence-grounded-investigation.md))。
 - **説明責任は人間**: AIは実行責任を持てるが、説明責任は必ず人間が持つ([GOV-004](01-governance/01-04-raci.md))。
+
+設計根拠は、原則としてNISTの文書(CSF 2.0、SP 800-61 Rev.3、AI RMF、AI 600-1、AI 100-2、SP 800-53 など)に限る。
+文書ごとの根拠は [設計根拠の参照文献(OV-005)](00-overview/00-05-references.md) にまとめている。
 
 ## 構成と読む順序
 
@@ -35,7 +37,7 @@ AIエージェントの出力は、人間が検証できる形でなければ運
 
 | # | ディレクトリ | 内容 | 主なNIST CSF 2.0の機能 |
 |---|---|---|---|
-| 0 | [`00-overview/`](00-overview/) | [用語集](00-overview/00-01-glossary.md)、[NIST CSF 2.0の使い方](00-overview/00-02-nist-csf-usage.md)、[文書規約](00-overview/00-03-document-conventions.md)、[カスタマイズポイント一覧](00-overview/00-04-customization-points.md) | ― |
+| 0 | [`00-overview/`](00-overview/) | [用語集](00-overview/00-01-glossary.md)、[NIST CSF 2.0の使い方](00-overview/00-02-nist-csf-usage.md)、[文書規約](00-overview/00-03-document-conventions.md)、[カスタマイズポイント一覧](00-overview/00-04-customization-points.md)、[設計根拠の参照文献](00-overview/00-05-references.md) | ― |
 | 1 | [`01-governance/`](01-governance/) | 組織体制、重大度マトリクス、外部報告、RACI、運用時間とオンコール | Govern、Respond |
 | 2 | [`02-agentic-ai/`](02-agentic-ai/) | エージェントの構成、権限レベルと承認、判断ログ、監査とKill-switch、AI固有の脅威、[証拠に基づく調査](02-agentic-ai/02-06-evidence-grounded-investigation.md) | Govern、Detect、Respond |
 | 3 | [`03-soc-runbooks/`](03-soc-runbooks/README.md) | 検知シナリオ別のRunbook(7件)と定常業務(日常運用、脅威ハンティング、コンプライアンス監視) | Detect、Identify |
