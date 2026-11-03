@@ -1,6 +1,6 @@
 > **文書ID**: CSIRT-001
-> **バージョン**: 0.3.0
-> **改訂日**: 2026-11-02
+> **バージョン**: 0.4.0
+> **改訂日**: 2026-11-03
 
 # インシデント対応のライフサイクル
 
@@ -19,6 +19,18 @@ graph LR
     D -.->|必要に応じて| EXT["外部連携・報告<br/>CSIRT-002 / GOV-003"]
     C -.-> EXT
 ```
+
+本文書の段階は、実務で使いやすいよう対応の順序で並べている。各段階は、NIST SP 800-61 Rev.3が
+インシデント対応の整理に使うCSF 2.0の機能に、次のとおり対応する([OV-002](../00-overview/00-02-nist-csf-usage.md)、[OV-005](../00-overview/00-05-references.md))。
+
+| 本文書の段階 | CSF 2.0の機能・カテゴリ |
+|---|---|
+| 1. 準備 | Govern、Identify、Protect(準備) |
+| 2. 検知・分析 | Detect(DE.AE)、Respond(RS.MA、RS.AN) |
+| 3. 封じ込め、4. 根絶 | Respond(RS.MI) |
+| 5. 復旧 | Recover(RC.RP、RC.CO) |
+| 6. 事後活動 | Identify(ID.IM) |
+| 外部連携・報告 | Respond(RS.CO) |
 
 ## 1. 準備(平時)
 

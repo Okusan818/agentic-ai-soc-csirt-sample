@@ -14,9 +14,8 @@ CSIRT(Computer Security Incident Response Team)の、設計書・運用手順書
 - 従業員 約1万人 `P-01`、構成会社 100社 `P-02` のグループ企業。コーポレート(親会社)の方針のもと、
   グループ専任のシステム子会社がセキュリティ運用を担う
 - オンプレミスとクラウドの両方に資産がある
-- SOC・CSIRTの機能範囲は、Exabeam社の解説記事
-  [SOCとCSIRT:6つの主な違いと両方が必要な組織とは?](https://www.exabeam.com/ja/explainers/information-security/soc-vs-csirt-6-key-differences-and-which-organizations-need-both/)
-  の定義に基づく
+- SOC・CSIRTの機能範囲は、[NIST SP 800-61 Rev.3](https://doi.org/10.6028/NIST.SP.800-61r3) のインシデント対応モデル(CSF 2.0の機能による整理)に基づく
+  ([ADR-002](docs/decisions/ADR-002-scope-and-evaluation.md))
 - 文書の整理と機能水準の評価には **NIST CSF 2.0** を使う([OV-002](00-overview/00-02-nist-csf-usage.md))
 
 ## 設計の考え方
@@ -28,7 +27,7 @@ AIエージェントの出力は、人間が検証できる形でなければ運
   コードで検証してから人間に渡す。証拠が足りなければAIは判定しない([AI-006](02-agentic-ai/02-06-evidence-grounded-investigation.md)、[ADR-013](docs/decisions/ADR-013-evidence-grounded-investigation.md))。
 - **説明責任は人間**: AIは実行責任を持てるが、説明責任は必ず人間が持つ([GOV-004](01-governance/01-04-raci.md))。
 
-設計根拠は、原則としてNISTの文書(CSF 2.0、SP 800-61 Rev.3、AI RMF、AI 600-1、AI 100-2、SP 800-53 など)に限る。
+設計根拠は、NISTの文書(CSF 2.0、SP 800-61 Rev.3、AI RMF、AI 600-1、AI 100-2、SP 800-53 など)に限る。
 文書ごとの根拠は [設計根拠の参照文献(OV-005)](00-overview/00-05-references.md) にまとめている。
 
 ## 構成と読む順序

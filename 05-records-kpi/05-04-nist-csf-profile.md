@@ -34,7 +34,7 @@
 
 | カテゴリ | 範囲 | 本一式の対応文書 | Current | Target | 差分と改善計画 |
 |---|---|---|---|---|---|
-| GV.OC 組織の状況 | ○ | [GOV-001](../01-governance/01-01-organization-structure.md) | | | |
+| GV.OC 組織の状況 | ○ | [GOV-001](../01-governance/01-01-organization-structure.md)、[SOC-053](../03-soc-runbooks/03-53-compliance-monitoring.md)(法令・規程の順守状況の監視) | | | |
 | GV.RM リスクマネジメント戦略 | ○ | [GOV-002](../01-governance/01-02-severity-matrix.md) | | | |
 | GV.RR 役割・責任・権限 | ◎ | [GOV-001](../01-governance/01-01-organization-structure.md)、[GOV-004](../01-governance/01-04-raci.md)、[GOV-005](../01-governance/01-05-operating-hours.md)、[AI-002](../02-agentic-ai/02-02-authority-levels.md) | | | |
 | GV.PO ポリシー | ○ | [AI-002](../02-agentic-ai/02-02-authority-levels.md)(AIの運用方針) | | | |

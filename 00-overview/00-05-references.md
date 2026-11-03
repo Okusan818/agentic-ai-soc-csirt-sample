@@ -9,8 +9,7 @@
 
 ## 1. 方針
 
-- 設計根拠は、原則としてNIST(米国国立標準技術研究所)の文書に限る。
-  例外は、SOC・CSIRTの機能範囲の定義([ADR-002](../docs/decisions/ADR-002-scope-and-evaluation.md))だけとする。
+- 設計根拠は、NIST(米国国立標準技術研究所)の文書に限る。
 - 確定版(Final)の文書を規範的な根拠とする。ドラフトや策定中の文書は「参考」として扱い、本文の規則の根拠にはしない。
   確定したときに第4章の手順で見直す。
 - 特定の製品・サービス・企業の事例は根拠にしない。
@@ -22,7 +21,7 @@
 | ID | 文献 | 版・発行 | 本一式での用途 |
 |---|---|---|---|
 | `N-01` | [NIST CSWP 29: The NIST Cybersecurity Framework (CSF) 2.0](https://doi.org/10.6028/NIST.CSWP.29) | 2024年2月 | 文書体系の整理と、SOC・CSIRTの機能水準の評価([OV-002](00-02-nist-csf-usage.md)、[REC-004](../05-records-kpi/05-04-nist-csf-profile.md)) |
-| `N-02` | [NIST SP 800-61 Rev. 3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 Community Profile](https://doi.org/10.6028/NIST.SP.800-61r3) | 2025年4月 | インシデント対応のライフサイクルと役割 |
+| `N-02` | [NIST SP 800-61 Rev. 3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 Community Profile](https://doi.org/10.6028/NIST.SP.800-61r3) | 2025年4月 | SOC・CSIRTの機能範囲の定義([ADR-002](../docs/decisions/ADR-002-scope-and-evaluation.md)、[OV-002](00-02-nist-csf-usage.md))、インシデント対応のライフサイクルと役割 |
 | `N-03` | [NIST AI 100-1: Artificial Intelligence Risk Management Framework (AI RMF 1.0)](https://doi.org/10.6028/NIST.AI.100-1) | 2023年1月 | AIのリスク管理(GOVERN / MAP / MEASURE / MANAGE)と、信頼できるAIの特性 |
 | `N-04` | [NIST AI 600-1: Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile](https://doi.org/10.6028/NIST.AI.600-1) | 2024年7月 | 生成AI固有のリスク(作話〈Confabulation〉、情報セキュリティ、データプライバシー、人間とAIの構成〈Human-AI Configuration〉、バリューチェーンなど) |
 | `N-05` | [NIST AI 100-2 E2025: Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations](https://doi.org/10.6028/NIST.AI.100-2e2025) | 2025年3月 | AIへの攻撃の分類(間接プロンプトインジェクション、エージェントへの攻撃など) |
@@ -55,6 +54,7 @@
 
 | 文書 | 根拠(確定版) |
 |---|---|
+| [OV-002](00-02-nist-csf-usage.md) 機能範囲 | `N-02`(CSF 2.0の機能によるインシデント対応モデル)、`N-01` |
 | [GOV-001](../01-governance/01-01-organization-structure.md)、[GOV-004](../01-governance/01-04-raci.md) 体制・RACI | `N-01` GV.RR、`N-02`(インシデント対応の役割)、`N-03` GOVERN |
 | [GOV-002](../01-governance/01-02-severity-matrix.md) 重大度 | `N-02`(インシデントの優先度付け)、`N-01` RS.MA |
 | [GOV-003](../01-governance/01-03-external-reporting-flow.md) 外部報告 | `N-02`、`N-01` RS.CO |

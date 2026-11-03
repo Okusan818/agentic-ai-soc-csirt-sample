@@ -6,7 +6,7 @@
 | 文書ID | 判断 |
 |---|---|
 | [ADR-001](ADR-001-document-structure.md) | 文書体系(番号付きディレクトリ、Markdown・Mermaid、日本語、CC BY 4.0) |
-| [ADR-002](ADR-002-scope-and-evaluation.md) | 機能範囲はExabeamの定義、評価はNIST CSF 2.0のプロファイルとTier |
+| [ADR-002](ADR-002-scope-and-evaluation.md) | 機能範囲はNIST SP 800-61 Rev.3、評価はNIST CSF 2.0のプロファイルとTier |
 | [ADR-003](ADR-003-soc-csirt-structure.md) | SOCは常設、CSIRTは兼務・発動型 |
 | [ADR-004](ADR-004-group-companies.md) | 構成会社にPoCを置き、外部報告の主体は構成会社とする |
 | [ADR-005](ADR-005-severity-matrix.md) | 重大度は影響度×緊急度のマトリクスで4段階 |
