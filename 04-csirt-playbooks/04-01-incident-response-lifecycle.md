@@ -20,17 +20,19 @@ graph LR
     C -.-> EXT
 ```
 
-本文書の段階は、実務で使いやすいよう対応の順序で並べている。各段階は、NIST SP 800-61 Rev.3が
-インシデント対応の整理に使うCSF 2.0の機能に、次のとおり対応する([OV-002](../00-overview/00-02-nist-csf-usage.md)、[OV-005](../00-overview/00-05-references.md))。
+本文書の段階は、旧版のSP 800-61(Rev.2)のライフサイクルの段階に沿っている。SP 800-61 Rev.3は、
+新しいモデル(CSF 2.0の機能に基づくライフサイクル)を示したうえで、組織に合ったモデルを使ってよいとしている。
+旧版の段階とCSF 2.0の機能の対応は、SP 800-61 Rev.3 第2.1節 表1のとおりである([OV-005](../00-overview/00-05-references.md) `N-02`)。
 
-| 本文書の段階 | CSF 2.0の機能・カテゴリ |
+| 本文書の段階 | CSF 2.0の機能(SP 800-61 Rev.3 表1) |
 |---|---|
-| 1. 準備 | Govern、Identify、Protect(準備) |
-| 2. 検知・分析 | Detect(DE.AE)、Respond(RS.MA、RS.AN) |
-| 3. 封じ込め、4. 根絶 | Respond(RS.MI) |
-| 5. 復旧 | Recover(RC.RP、RC.CO) |
-| 6. 事後活動 | Identify(ID.IM) |
-| 外部連携・報告 | Respond(RS.CO) |
+| 1. 準備 | Govern、Identify(全カテゴリ)、Protect |
+| 2. 検知・分析 | Detect、Identify(改善 ID.IM) |
+| 3. 封じ込め、4. 根絶、5. 復旧 | Respond、Recover、Identify(改善 ID.IM) |
+| 6. 事後活動 | Identify(改善 ID.IM) |
+
+SP 800-61 Rev.3は、教訓を事後活動まで待たず、気づいた時点で共有することを求めている。事後レビュー([CSIRT-003](04-03-post-incident-review.md))
+の前でも、検知ルールの改善などの教訓は [SOC-051](../03-soc-runbooks/03-51-daily-operations.md) の手順で反映してよい。
 
 ## 1. 準備(平時)
 
