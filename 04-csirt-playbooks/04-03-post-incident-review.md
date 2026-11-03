@@ -1,6 +1,6 @@
 > **文書ID**: CSIRT-003
-> **バージョン**: 0.2.0
-> **改訂日**: 2026-11-02
+> **バージョン**: 0.3.0
+> **改訂日**: 2026-11-03
 
 # 事後レビュー
 
@@ -21,7 +21,7 @@
 | 概要 | インシデントID([REC-001](../05-records-kpi/05-01-incident-record-format.md))、重大度、影響範囲 |
 | 時系列 | 推定発生から検知・初動・封じ込め・収束までの主な出来事と時刻 |
 | 根本原因 | 侵入経路、悪用された脆弱性・設定ミス |
-| AIの判断 | AIの判定・措置のうち、有効だったもの、誤っていたもの(判断ログ [REC-002](../05-records-kpi/05-02-ai-decision-log-format.md) を参照) |
+| AIの判断 | AIの判定・措置のうち、有効だったもの、誤っていたもの。引用検証で除去された所見と、判断に影響したカバレッジギャップ(判断ログ [REC-002](../05-records-kpi/05-02-ai-decision-log-format.md)、[AI-006](../02-agentic-ai/02-06-evidence-grounded-investigation.md)) |
 | 良かった点 | 効果的だった対応 |
 | 改善点 | 遅れ、判断の誤り、不足していた手順・ツール |
 | 再発防止策 | 担当者と期限を決めた作業の一覧 |
@@ -33,6 +33,7 @@
 | 検知できなかった、検知が遅れた | 検知ルールの調整([SOC-051](../03-soc-runbooks/03-51-daily-operations.md) 第3章) |
 | 同じ手口がほかにもあるかもしれない | 脅威ハンティングの仮説([SOC-052](../03-soc-runbooks/03-52-threat-hunting.md)) |
 | AIの判定や権限区分が不適切だった | AIの定期レビュー([AI-004](../02-agentic-ai/02-04-audit-and-kill-switch.md)) |
+| 必要な証拠を取得できなかった(未確認) | 該当Runbookの証拠の定義(第7章)、ログソースの接続・保存期間([SOC-053](../03-soc-runbooks/03-53-compliance-monitoring.md)) |
 | 手順・体制が不足していた | 該当するRunbook・Playbook、[GOV-002](../01-governance/01-02-severity-matrix.md) の見直し |
 
 再発防止策の進み具合は、月次報告([SOC-053](../03-soc-runbooks/03-53-compliance-monitoring.md))で確認する。

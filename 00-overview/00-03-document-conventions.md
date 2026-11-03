@@ -1,6 +1,6 @@
 > **文書ID**: OV-003
-> **バージョン**: 0.1.0
-> **改訂日**: 2026-11-02
+> **バージョン**: 0.2.0
+> **改訂日**: 2026-11-03
 
 # 文書規約
 
@@ -55,9 +55,11 @@
 |---|---|
 | 重大度マトリクス | [GOV-002](../01-governance/01-02-severity-matrix.md) |
 | AIの権限レベル・承認者 | [AI-002](../02-agentic-ai/02-02-authority-levels.md) |
+| 証拠パッケージ・判定語彙・引用検証 | [AI-006](../02-agentic-ai/02-06-evidence-grounded-investigation.md) |
 | 記録項目 | [REC-001](../05-records-kpi/05-01-incident-record-format.md)、[REC-002](../05-records-kpi/05-02-ai-decision-log-format.md) |
 | NIST CSF 2.0との対応 | [REC-004](../05-records-kpi/05-04-nist-csf-profile.md) |
 | 調整可能な数値 | [OV-004](00-04-customization-points.md) |
+| 設計根拠の参照文献 | [OV-005](00-05-references.md) |
 
 ## 4. カスタマイズ箇所の書き方
 
@@ -81,4 +83,5 @@
 2. 該当ディレクトリの `README.md`(索引)に1行追加する。
 3. [REC-004](../05-records-kpi/05-04-nist-csf-profile.md) の対応文書欄に追記する。
 4. 新しい数値を使う場合は [OV-004](00-04-customization-points.md) にパラメータを追加する。
-5. [`CHANGELOG.md`](../CHANGELOG.md) に追記する。
+5. 設計根拠を [OV-005](00-05-references.md) 第3章に追記する。根拠はNISTの確定版の文書から選ぶ。
+6. [`CHANGELOG.md`](../CHANGELOG.md) に追記する。

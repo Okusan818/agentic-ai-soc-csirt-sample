@@ -1,6 +1,6 @@
 > **文書ID**: OV-002
-> **バージョン**: 0.2.0
-> **改訂日**: 2026-11-02
+> **バージョン**: 0.3.0
+> **改訂日**: 2026-11-03
 
 # NIST CSF 2.0の使い方
 
@@ -10,10 +10,22 @@ SOC・CSIRTの機能水準の評価の両方の枠組みとして使う。設計
 
 ## 1. 対象範囲
 
-本一式の対象は、Exabeam社の定義に基づくSOC・CSIRTの機能範囲(監視・検知、インシデント管理、
-コンプライアンス監視、インシデント対応、再発防止)である。そのため、CSF 2.0の6機能のうち
-主な対象は Detect・Respond・Recover と、それらを支える Govern・Identify の一部になる。
-Protect(アクセス制御、データ保護、基盤の堅牢化など)の大半は対象外とする。
+本一式の対象は、NIST SP 800-61 Rev.3のインシデント対応モデルに基づくSOC・CSIRTの機能範囲である。
+SP 800-61 Rev.3は、インシデント対応をCSF 2.0の6機能で整理し、Govern・Identify・Protectを準備、
+Detect・Respond・Recoverをインシデント対応そのもの、Identifyの改善(ID.IM)を教訓の反映と位置づけている。
+
+本一式では、これを次のように分担する(SOCとCSIRTの分け方は本一式の設計判断。[ADR-003](../docs/decisions/ADR-003-soc-csirt-structure.md))。
+
+| 機能 | SOC | CSIRT |
+|---|---|---|
+| Detect | 継続的な監視・検知・分析(DE.CM、DE.AE) | ― |
+| Respond | 一次評価と初期対応(RS.MA、RS.AN、RS.MI) | 重大インシデントの統制・調整、報告(RS.MA、RS.CO) |
+| Recover | ― | 復旧の統制、復旧時の連絡(RC.RP、RC.CO) |
+| Identify | 監視対象・保護資産の把握(ID.AM の一部) | 事後レビューによる改善(ID.IM) |
+| Govern | 役割・権限・監督(GV.RR、GV.OV)、コンプライアンス監視 | ― |
+
+そのため、主な対象は Detect・Respond・Recover と、それらを支える Govern・Identify の一部になる。
+Protect(アクセス制御、データ保護、基盤の堅牢化など)の大半は、準備段階として重要だが本一式の対象外とする。
 
 ```mermaid
 graph LR
