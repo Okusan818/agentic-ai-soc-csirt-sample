@@ -16,8 +16,8 @@ CSIRT-001を基本とし、シナリオに固有の判断だけを補足する�
 
 | 文書ID | シナリオ | 主な起点のRunbook |
 |---|---|---|
-| [CSIRT-011](04-11-ransomware.md) | ランサムウェア | [SOC-004](../03-soc-runbooks/03-04-ransomware-precursor.md) |
-| [CSIRT-012](04-12-data-breach.md) | 情報漏洩 | [SOC-002](../03-soc-runbooks/03-02-phishing.md)、[SOC-007](../03-soc-runbooks/03-07-cloud-misconfiguration.md) |
+| [CSIRT-011](04-11-ransomware.md) | ランサムウェア | [SOC-004](../03-soc-runbooks/03-04-ransomware-precursor.md)、[SOC-003](../03-soc-runbooks/03-03-malware-detection.md) |
+| [CSIRT-012](04-12-data-breach.md) | 情報漏洩 | [SOC-002](../03-soc-runbooks/03-02-phishing.md)、[SOC-005](../03-soc-runbooks/03-05-insider-threat.md)、[SOC-007](../03-soc-runbooks/03-07-cloud-misconfiguration.md)、[CSIRT-011](04-11-ransomware.md) |
 
 ## 補足Playbookを追加するには
 

@@ -8,7 +8,7 @@
 |---|---|---|
 | [SOC-001](03-01-anomalous-login.md) | 異常ログイン(不正アクセスの疑い) | ― |
 | [SOC-002](03-02-phishing.md) | フィッシング | [CSIRT-012](../04-csirt-playbooks/04-12-data-breach.md)(情報漏洩時) |
-| [SOC-003](03-03-malware-detection.md) | マルウェア | ― |
+| [SOC-003](03-03-malware-detection.md) | マルウェア | [CSIRT-011](../04-csirt-playbooks/04-11-ransomware.md)(暗号化・破壊の挙動がある場合) |
 | [SOC-004](03-04-ransomware-precursor.md) | ランサムウェアの前兆 | [CSIRT-011](../04-csirt-playbooks/04-11-ransomware.md) |
 | [SOC-005](03-05-insider-threat.md) | 内部不正の疑い | [CSIRT-012](../04-csirt-playbooks/04-12-data-breach.md)(情報漏洩時) |
 | [SOC-006](03-06-privilege-escalation.md) | 権限昇格 | ― |

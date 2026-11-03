@@ -1,6 +1,6 @@
 > **文書ID**: OV-004
 > **バージョン**: 0.2.0
-> **改訂日**: 2026-11-02
+> **改訂日**: 2026-11-03
 
 # カスタマイズポイント一覧
 
@@ -39,7 +39,7 @@
 | `P-13` | 日次サンプリングレビューの件数 | 前日のLv1実行件数の10%(最低10件) | [AI-004](../02-agentic-ai/02-04-audit-and-kill-switch.md) |
 | `P-26` | モデル・設定の変更後に、Lv1をLv2として扱う期間 | 2週間 | [AI-005](../02-agentic-ai/02-05-ai-specific-threats.md) |
 | `P-27` | 証拠収集の既定の期間 | 基準時刻の前72時間から収集時点まで | [AI-006](../02-agentic-ai/02-06-evidence-grounded-investigation.md)、各Runbook第7章 |
-| `P-28` | 軽量トリアージで誤検知としてクローズした件の日次サンプリング件数 | 前日のクローズ件数の10%(最低10件) | [AI-006](../02-agentic-ai/02-06-evidence-grounded-investigation.md)、[AI-004](../02-agentic-ai/02-04-audit-and-kill-switch.md) |
+| `P-28` | 軽量トリアージで誤検知としてクローズした件の日次サンプリング件数 | 前日のクローズ件数の10%(最低10件) | [AI-004](../02-agentic-ai/02-04-audit-and-kill-switch.md) |
 | `P-29` | グループ横断テレメトリで、集約値を表示する最小の該当社数 | 3社 | [AI-006](../02-agentic-ai/02-06-evidence-grounded-investigation.md) |
 
 ### 周期・期限

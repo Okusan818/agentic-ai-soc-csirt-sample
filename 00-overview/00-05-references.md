@@ -50,21 +50,21 @@
 | [AI-003](../02-agentic-ai/02-03-decision-logging.md) 判断ログ | 判定根拠の記録、改ざん防止、保存期間 | `N-03` 説明責任と透明性、説明可能性と解釈可能性。`N-06` AU-2(イベントの記録)、AU-3(監査記録の内容)、AU-9(監査情報の保護)、AU-10(否認防止)、AU-11(監査記録の保存) | ― |
 | [AI-004](../02-agentic-ai/02-04-audit-and-kill-switch.md) 監査・緊急停止 | 日次サンプリング、異常検知、定期レビュー、Kill-switch | `N-03` MEASURE(継続的な測定)、MANAGE 2.4(意図した用途に反するAIシステムを置き換え・切り離し・停止する仕組み)。`N-06` AU-6(監査記録のレビュー)、CA-7(継続的モニタリング)、SI-17(フェイルセーフの手順) | ― |
 | [AI-005](../02-agentic-ai/02-05-ai-specific-threats.md) AI固有の脅威 | プロンプトインジェクション、認証情報の悪用、外部AIサービス、変更管理 | `N-05` 第3.4節、第3.5節。`N-04` 情報セキュリティ、データプライバシー、バリューチェーン。`N-06` SI-10(入力の検証)、SA-9(外部のシステムサービス)、CM-3(構成変更の管理)、CM-4(影響分析) | ― |
-| [AI-006](../02-agentic-ai/02-06-evidence-grounded-investigation.md) 証拠に基づく調査 | 証拠収集と推論の分離、調査範囲の強制、引用検証、判定保留、構成会社間のデータ分離 | `N-04` 作話(Confabulation)、Human-AI Configuration(第2.7節 自動化バイアス)、データプライバシー。`N-03` 妥当性と信頼性、説明可能性と解釈可能性。`N-05` 第3.4節(調査対象データ経由の間接プロンプトインジェクション)。`N-06` AC-4(情報フローの制御)、SI-10。`N-01` DE.AE、RS.AN | `N-51`(AIを使ったサイバー防御) |
+| [AI-006](../02-agentic-ai/02-06-evidence-grounded-investigation.md) 証拠に基づく調査 | 証拠収集と推論の分離、調査範囲の強制、引用検証、判定保留、構成会社間のデータ分離 | `N-04` 作話(Confabulation)、Human-AI Configuration(第2.7節 自動化バイアス)、データプライバシー。`N-03` 妥当性と信頼性、説明可能性と解釈可能性。`N-05` 第3.4節(調査対象データ経由の間接プロンプトインジェクション)。`N-06` AC-4(情報フローの制御)、SI-10 | `N-51`(AIを使ったサイバー防御) |
 
 ### ガバナンス・運用
 
 | 文書 | 根拠(確定版) |
 |---|---|
-| [OV-002](00-02-nist-csf-usage.md) 機能範囲 | `N-02` 第2.1節 図2(CSF 2.0の機能によるインシデント対応モデル)、`N-01` |
-| [GOV-001](../01-governance/01-01-organization-structure.md)、[GOV-004](../01-governance/01-04-raci.md) 体制・RACI | `N-01` GV.RR、`N-02` 第2.2節(社内・委託・親組織などのインシデントハンドラー、複数チームのフェデレーション)、`N-03` GOVERN |
-| [GOV-002](../01-governance/01-02-severity-matrix.md) 重大度 | `N-02` 第2.3節(優先度付けと重大度の推定の指針)、`N-01` RS.MA |
-| [GOV-003](../01-governance/01-03-external-reporting-flow.md) 外部報告 | `N-02`、`N-01` RS.CO |
-| [SOC-001〜007](../03-soc-runbooks/README.md)、[SOC-051〜053](../03-soc-runbooks/README.md) | `N-01` DE.CM、DE.AE、RS.MI。`N-06` SI-4(システムの監視)、IR-4、IR-5(インシデントの監視) |
-| [CSIRT-001〜003](../04-csirt-playbooks/README.md) | `N-02` 第2.1節 表1(旧版の段階とCSF 2.0の機能の対応)、`N-01` RS・RC・ID.IM。`N-06` IR-4、IR-6(インシデントの報告)、IR-8(インシデント対応計画) |
-| [REC-001〜004](../05-records-kpi/) 記録・評価 | `N-01`(プロファイルとTier)、`N-02`、`N-06` AU-11 |
+| [OV-002](00-02-nist-csf-usage.md) 機能範囲 | `N-02` 第2.1節 図2(CSF 2.0の機能によるインシデント対応モデル) |
+| [GOV-001](../01-governance/01-01-organization-structure.md)、[GOV-004](../01-governance/01-04-raci.md) 体制・RACI | `N-02` 第2.2節(社内・委託・親組織などのインシデントハンドラー、複数チームのフェデレーション)、`N-03` GOVERN |
+| [GOV-002](../01-governance/01-02-severity-matrix.md) 重大度 | `N-02` 第2.3節(優先度付けと重大度の推定の指針) |
+| [GOV-003](../01-governance/01-03-external-reporting-flow.md) 外部報告 | `N-02` 第2.2節(法務などの関係者の役割) |
+| [SOC-001〜007](../03-soc-runbooks/README.md)、[SOC-051〜053](../03-soc-runbooks/README.md) | `N-06` SI-4(システムの監視)、IR-4、IR-5(インシデントの監視) |
+| [CSIRT-001〜003](../04-csirt-playbooks/README.md) | `N-02` 第2.1節 表1(旧版の段階とCSF 2.0の機能の対応)。`N-06` IR-4、IR-6(インシデントの報告)、IR-8(インシデント対応計画) |
+| [REC-001〜004](../05-records-kpi/) 記録・評価 | `N-01`(プロファイルとTier)、`N-06` AU-11 |
 
-CSF 2.0のカテゴリとの詳しい対応は [REC-004](../05-records-kpi/05-04-nist-csf-profile.md) を参照。
+CSF 2.0(`N-01`)のカテゴリとの対応は [REC-004](../05-records-kpi/05-04-nist-csf-profile.md) にだけ記載するため、本章には書かない。
 
 > **カスタマイズ:** 自組織で別の規格(ISO/IEC 27001、ISO/IEC 42001など)を監査の基準にしている場合は、
 > 本章に列を追加して対応を記入すること。
