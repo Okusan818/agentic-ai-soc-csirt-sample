@@ -43,6 +43,7 @@ AIエージェントの出力は、人間が検証できる形でなければ運
 | 4 | [`04-csirt-playbooks/`](04-csirt-playbooks/README.md) | インシデント対応のライフサイクル、外部連携、事後レビュー、補足Playbook(ランサムウェア、情報漏洩) | Respond、Recover、Identify |
 | 5 | [`05-records-kpi/`](05-records-kpi/) | インシデント記録、AI判断ログ、KPI、NIST CSF 2.0プロファイル | Govern(評価) |
 | ― | [`docs/decisions/`](docs/decisions/README.md) | 設計判断記録(ADR): 各判断の理由と代替案、変更するときの影響範囲 | ― |
+| ― | [`examples/`](examples/README.md) | 利用事例: 架空の組織と具体的な製品に当てはめた例([小規模製造業 × Microsoft 365](examples/smb-m365/README.md)) | ― |
 
 各文書とNIST CSF 2.0カテゴリの詳しい対応は [REC-004](05-records-kpi/05-04-nist-csf-profile.md) にまとめています。
 
@@ -52,6 +53,8 @@ AIエージェントの出力は、人間が検証できる形でなければ運
 2. 本文中の「**カスタマイズ:**」の箇所を書き換える。
 3. 体制や方針を変える場合は、[ADR](docs/decisions/README.md) の「変更するときの影響範囲」を確認する。
 4. シナリオを追加する場合は、[Runbook雛形(SOC-000)](03-soc-runbooks/03-00-runbook-template.md)・[補足Playbook雛形(CSIRT-000)](04-csirt-playbooks/04-00-playbook-template.md) を複製する。
+
+具体的な当てはめ方は、[利用事例](examples/README.md)(従業員160名の製造業が Microsoft 365 Business Premium・Microsoft Sentinel・FortiGate・MDRで実装する例)を参照してください。
 
 文書の書き方の規約は [文書規約(OV-003)](00-overview/00-03-document-conventions.md) を参照してください。
 
