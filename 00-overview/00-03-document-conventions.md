@@ -1,6 +1,6 @@
 > **文書ID**: OV-003
-> **バージョン**: 0.2.0
-> **改訂日**: 2026-11-03
+> **バージョン**: 0.3.0
+> **改訂日**: 2026-11-08
 
 # 文書規約
 
@@ -17,6 +17,7 @@
 | `04-csirt-playbooks/` | CSIRTプレイブック | `CSIRT` |
 | `05-records-kpi/` | 記録フォーマット・KPI・CSF評価 | `REC` |
 | `docs/decisions/` | 設計判断記録(ADR) | `ADR` |
+| `examples/` | 利用事例([ADR-014](../docs/decisions/ADR-014-examples.md))。事例ごとのディレクトリに置く | 事例ごとに決める(`examples/smb-m365/` は `EXA`) |
 
 - ファイル名は `NN-mm-slug.md`(`NN`=ディレクトリ番号、`mm`=ディレクトリ内の番号、`slug`=英語ケバブケース)。
   ADRのみ `ADR-nnn-slug.md` とする。
@@ -72,6 +73,7 @@
 ```
 
 - 特定の製品名は書かない。必要な場合は `<SIEM製品>` のようなプレースホルダーを使う。
+  ただし `examples/` の利用事例では製品名を書いてよい([ADR-014](../docs/decisions/ADR-014-examples.md))。
 
 ## 5. 図
 

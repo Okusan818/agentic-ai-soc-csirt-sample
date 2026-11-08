@@ -18,6 +18,7 @@
 | [ADR-011](ADR-011-csirt-playbooks.md) | CSIRTは共通ライフサイクルとシナリオ別の補足 |
 | [ADR-012](ADR-012-records-and-kpi.md) | 記録はMarkdownの表、KPIは基本指標のみ |
 | [ADR-013](ADR-013-evidence-grounded-investigation.md) | 証拠の収集と推論を分け、所見を証拠に基づかせる |
+| [ADR-014](ADR-014-examples.md) | 利用事例は `examples/` に置き、汎用の一式との差分だけを書く |
 
 新しい判断を記録するときは、既存のADRと同じ構成(背景・決定・理由・検討した代替案・変更するときの影響範囲)で
 `ADR-nnn-slug.md` を追加する。決定を覆す場合は、元のADRのステータスを「廃止(ADR-nnnで置き換え)」に変える。
